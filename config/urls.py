@@ -11,7 +11,8 @@ from django.views import defaults as default_views
 urlpatterns = [
     url(r'^$', TemplateView.as_view(template_name='pages/home.html'), name='home'),
     url(r'^about/$', TemplateView.as_view(template_name='pages/about.html'), name='about'),
-    url(r'^signup/$', 'dashboard.views.signup', name='momentum-signup'),
+    url(r'^signup/$', 'dashboard.views.momentum_signup', name='momentum-signup'),
+    url(r'^dashboard/$', 'dashboard.views.dashboard', name='momentum-dashboard'),
 
     # Django Admin, use {% url 'admin:index' %}
     url(settings.ADMIN_URL, include(admin.site.urls)),

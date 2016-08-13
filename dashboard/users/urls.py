@@ -33,10 +33,4 @@ urlpatterns = [
         view=views.UserUpdateView.as_view(),
         name='update'
     ),
-
-    url(
-        regex=r'^signup/$',
-        view=views.signup,
-        name='signup'
-    ),
 ]
