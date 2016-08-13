@@ -11,7 +11,7 @@ def momentum_signup(request):
     if request.method == 'POST':
         form = MomentumSignupForm(request.POST)
         if form.is_valid():
-            return HttpResponseRedirect("/dash")
+            return HttpResponseRedirect("/dashboard")
     else:
         form = MomentumSignupForm(
             initial={
