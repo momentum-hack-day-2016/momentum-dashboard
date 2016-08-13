@@ -5,8 +5,8 @@
      - Load website:
          url: signup/?name=Owen+Smith&email=owen.smith%40labour.org.uk&area=Pontypridd
      - Fill form:
-         password1: ihatejeremy
-         password2: ihatejeremy
+         id_password1: ihatejeremy
+         id_password2: ihatejeremy
      - Click: register-button
      - Wait to appear:
          item: dashboard
