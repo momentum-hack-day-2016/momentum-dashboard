@@ -11,9 +11,12 @@
   scenario:
      - Load website:
          url: signup/?name=Owen+Smith&email=owen.smith%40labour.org.uk&area=Pontypridd
+     - Pause
      - Fill form:
          id_password1: ihatejeremy
          id_password2: ihatejeremy
+     - Pause
      - Click: register-button
+     - Pause
      - Wait to appear:
          item: dashboard
