@@ -1,0 +1,22 @@
+- name: Sign up and view dashboard
+  tags:
+    - dashboard
+  description: |
+    Owen Smith receives an email from the Momentum nationbuilder website that
+    contains the link below, allowing him to sign up to the Momentum dashboard,
+    where he can see detailed information on his membership.
+
+    His details are prefilled on the website - taken from a link in the momentum
+    nationbuilder email.
+  scenario:
+     - Load website:
+         url: signup/?name=Owen+Smith&email=owen.smith%40labour.org.uk&area=Pontypridd
+     - Pause
+     - Fill form:
+         id_password1: ihatejeremy
+         id_password2: ihatejeremy
+     - Pause
+     - Click: register-button
+     - Pause
+     - Wait to appear:
+         item: dashboard

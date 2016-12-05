@@ -1,12 +1,89 @@
-{% extends "base.html" %}
-{% block title %}{% block head_title %}{% endblock head_title %}{% endblock title %}
+{% load staticfiles %}
+<!DOCTYPE html>
+<head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+	<link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Droid+Serif' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="{% static "css/style.css" %}" />
+</head>
+	<body>
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12 logo">
+					<img src="{% static "images/logo300.jpg" %}"/>
+					<span id="logout">Logout</span>
+				</div>
+			</div>
+		</div>
+		<div class="container content-body">
+				<div class="row">
+					<div class="col-sm-6">
+						<div id="dashboard" class="widget">
+							<h2>Welcome!</h2>
+							<p>Member name: Joe Bloggs</p>
+							<p>Member number: 098349239043</p>
+							<p>Email address: mrjoe@imjoebloggs.com</p>
+						</div>
+					</div>
 
-{% block content %}
-<div class="row">
-  <div class="col-md-6 col-md-offset-3">
-    {% block inner %}{% endblock %}
-    
-    <span id="dashboard">Dashboard...</span>
-  </div>
-</div>
-{% endblock %}
+					<div class="col-md-6">
+						<div class="widget">
+							<h2>Events</h2>
+							<ul>
+								<li>13th Aug: Hack day</li>
+								<li>CLP nomination meeting</li>
+								<li>Momentum Camden meeting</li>
+								<li>Corbyn rally</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div  class="col-sm-6">
+						<div class="widget">
+							<h2>To Do</h2>
+							<ul>
+								<li>Lorem</li>
+								<li>Ipsum</li>
+								<li>Dolor</li>
+								<li>Sit</li>
+								<li>Amet</li>
+							</ul>
+
+						</div>
+
+					</div>
+
+					<div  class="col-sm-6">
+						<div class="widget">
+							<h2>Map</h2>
+							<img style="max-width:100%;"  src="{% static "images/fakemap.png" %}"/>
+
+						</div>
+
+					</div>
+					
+					
+					<div  class="col-sm-6">
+						<div class="widget">
+							<h2>Map</h2>
+							<iframe height="400px" src="http://tom.sanso.me/hack/widget-people-skills.html"/>
+
+						</div>
+
+					</div>
+
+
+
+				</div>
+			</div>
+			<div class="container footer">
+				<div class="row">
+					<div class="col-sm-12"><a href="#">Privacy Policy</a> </div>
+				</div>
+
+		</div>
+
+		<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" />
+	</body>
+</html>
